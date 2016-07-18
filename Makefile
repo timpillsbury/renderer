@@ -48,4 +48,5 @@ TESTS = \
 
 
 include tests/tests.mk
+include render.mk
 include deps.mk
