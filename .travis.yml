@@ -32,7 +32,7 @@ addons:
   artifacts:
     s3_region: "eu-west-1"
     paths:
-        - $(ls ./rendered/*/*.png | tr "\n" ":")
+        - pathtracer
     debug: true
 
 after_success:
