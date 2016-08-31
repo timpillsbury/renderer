@@ -28,12 +28,12 @@ script:
   - CXX=$COMPILER COVERAGE=yes make test --keep-going
   - CXX=$COMPILER COVERAGE=yes make render --keep-going
 
-addons:
-  artifacts:
-    s3_region: "eu-west-1"
-    paths:
-        - pathtracer
-    debug: true
+# addons:
+# artifacts:
+#    s3_region: "eu-west-1"
+#    paths:
+#        - pathtracer
+#    debug: true
 
 after_success:
   - coveralls --exclude vendor --exclude tests --gcov-options '\-lp'
