@@ -30,8 +30,6 @@ script:
 addons:
   artifacts:
     s3_region: "eu-central-1"
-    paths:
-      - $(ls rendered-*/*.png | tr "\n" ":")
     debug: true
 
 after_success:
