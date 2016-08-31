@@ -27,10 +27,11 @@ script:
   - CXX=$COMPILER COVERAGE=yes make
   - CXX=$COMPILER COVERAGE=yes make test --keep-going
 
-artifacts:
-  s3_region: "eu-central-1"
-  paths:
-    - $(ls rendered-*/*.png | tr "\n" ":")
+addons:
+  artifacts:
+    s3_region: "eu-central-1"
+    paths:
+      - $(ls rendered-*/*.png | tr "\n" ":")
 
 after_success:
   - coveralls --exclude vendor --exclude tests --gcov-options '\-lp'
