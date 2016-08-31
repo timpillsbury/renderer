@@ -30,6 +30,8 @@ script:
 addons:
   artifacts:
     s3_region: "eu-west-1"
+    paths:
+      - /home/travis/build/jeschkies/renderer/rendered
     debug: true
 
 after_success:
