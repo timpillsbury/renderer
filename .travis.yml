@@ -30,8 +30,6 @@ script:
 addons:
   artifacts:
     s3_region: "eu-west-1"
-    paths:
-      - ./rendered/204/radiosity_cornell_box.png
     debug: true
 
 after_success:
