@@ -31,7 +31,7 @@ addons:
   artifacts:
     s3_region: "eu-west-1"
     paths:
-      - $(ls ./rendered-*/*.png | tr "\n" ":")
+      - ./rendered-*/pathtracer_cornell_box.png
     debug: true
 
 after_success:
