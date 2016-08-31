@@ -32,6 +32,7 @@ addons:
     s3_region: "eu-central-1"
     paths:
       - $(ls rendered-*/*.png | tr "\n" ":")
+    debug: true
 
 after_success:
   - coveralls --exclude vendor --exclude tests --gcov-options '\-lp'
