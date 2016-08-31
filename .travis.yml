@@ -30,6 +30,8 @@ script:
 addons:
   artifacts:
     s3_region: "eu-west-1"
+    paths:
+      - $(ls $TRAVIS_BUILD_DIR/rendered-*/*.png | tr "\n" ":")
     debug: true
 
 after_success:
