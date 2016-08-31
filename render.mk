@@ -15,6 +15,7 @@ rendered/$(BUILD_NUMBER):
 	mkdir -p $@
 
 rendered/$(BUILD_NUMBER)/raycaster_cornell_box.pbm: scenes/cornell_box.blend raycaster | rendered/$(BUILD_NUMBER)
+	pwd && \
 	./raycaster $< 640 > $@
 
 rendered/$(BUILD_NUMBER)/raytracer_cornell_box.pbm: scenes/cornell_box.blend raytracer | rendered/$(BUILD_NUMBER)
